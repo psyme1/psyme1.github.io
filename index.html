@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>CMSC320_Lung_cancer_dataset (3)</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>CMSC320_Lung_cancer_dataset (4)</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7555,10 +7555,10 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>The main purpose of this project is to analyze and share how different features may increase the chances for lung cancer. This could make it easier for patients to recognize potential risk factors and consult a doctor earlier.</p>
+<p>The main purpose of this project is to analyze and share how different features may increase the chances of lung cancer. This could make it easier for patients to recognize potential risk factors and consult a doctor earlier.</p>
 <p>This could also clear any misconceptions people have about causes of cancer; however, we wanted to prioritize identifying patterns that might help researchers or clinicians understand risk factors, before clearing any misconceptions.</p>
 <p>Why is it important? According to a study done by UChicago Medicine, the mortality rate for people who are diagnosed with cancer late is significantly higher than the rate for people diagnosed early (Stage 1). By determining what the risk factors are for lung cancer, we can have patients be diagnosed earlier, since both the patients and the doctor will know if a patient is at high risk.
-We will use the features that we have in our dataset to provide an analysis on which features have the most likely effect on lung cancer while also providing information of any correlation between the different features for patients to make an informed decision on their self-diagnosis.</p>
+We will use the features that we have in our dataset to provide an analysis on which features have the most likely effect on lung cancer while also providing information on any correlation between the different features for patients to make an informed decision on their self-diagnosis.</p>
 </div>
 </div>
 </div>
@@ -7569,9 +7569,9 @@ We will use the features that we have in our dataset to provide an analysis on w
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Data-Curation">Data Curation<a class="anchor-link" href="#Data-Curation">¶</a></h1><p>For this tutorial download this dataset: <a href="http://kaggle.com/datasets/mikeytracegod/lung-cancer-risk-dataset">http://kaggle.com/datasets/mikeytracegod/lung-cancer-risk-dataset</a></p>
+<h1 id="Data-Curation">Data Curation<a class="anchor-link" href="#Data-Curation">¶</a></h1><p>For this tutorial, download this dataset: <a href="http://kaggle.com/datasets/mikeytracegod/lung-cancer-risk-dataset">http://kaggle.com/datasets/mikeytracegod/lung-cancer-risk-dataset</a></p>
 <p>Let us start by setting up the dataset. Once you’ve downloaded the dataset, we will be using the read_csv command to read in the csv file containing the dataset.</p>
-<p>Throughout this project we will be using pandas. Pandas is a Python library  which helps us load, analyze and process the data.</p>
+<p>Throughout this project, we will be using pandas. Pandas is a Python library that helps us load, analyze and process the data.</p>
 </div>
 </div>
 </div>
@@ -7909,7 +7909,7 @@ We will use the features that we have in our dataset to provide an analysis on w
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>As you can see above, if we perform the command df.head(). We can see a dataframe which is a like a spreadhseet within Python.</p>
+<p>As shown above, <code>df.head()</code> displays the first five rows of the dataset in a pandas DataFrame, which functions similarly to a spreadsheet in Python.</p>
 </div>
 </div>
 </div>
@@ -7945,7 +7945,7 @@ We will use the features that we have in our dataset to provide an analysis on w
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Let us start by using <code>df.info</code> which gives us useful information on the columns, size and data types.</p>
+<p>Let us start by using <code>df.info</code>, which gives us useful information on the columns, size and data types.</p>
 </div>
 </div>
 </div>
@@ -8221,9 +8221,9 @@ memory usage: 4.2+ MB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>We will now setup the dataset for analysis. First lets make sure all the categorical data is in binary. This is will help with the machine learning analysis since doing machine learning analysis is difficult with text.</p>
+<p>We will now set up the dataset for analysis. First, let's make sure all the categorical data is in binary. This will help with the machine learning analysis since doing machine learning analysis is difficult with text.</p>
 <p>So text like 'Yes' and 'No' will be converted to '1' and '0' respectively. We will also fill in the missing values with 'None'.</p>
-<p>Also to add more clarity for our analysis, let us create another feature called 'smoking intensity' that takes the pack_years feature and categorizes it into Heavy moderate and light.</p>
+<p>Also, to add more clarity for our analysis, let us create another feature called 'smoking intensity' that takes the pack_years feature and categorizes it into Heavy, Moderate and light.</p>
 </div>
 </div>
 </div>
@@ -8621,7 +8621,7 @@ memory usage: 4.2+ MB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Hypothesis testing allows us to make claims (hypotheses) about our data, and test them using different statistical methods. Typically, a null hypothesis and alternative hypothesis is created. If the resulting p value after the test is less than 0.05, that means the null hypothesis is rejected</p>
+<p>Hypothesis testing allows us to make claims (hypotheses) about our data and test them using different statistical methods. Typically, a null hypothesis and an alternative hypothesis are created. If the resulting p-value after the test is less than 0.05, that means the null hypothesis is rejected</p>
 </div>
 </div>
 </div>
@@ -8643,7 +8643,7 @@ memory usage: 4.2+ MB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>The first statistical method we will perform is a Chi-Squared test. We will use Chi-Squared to determine if lung cancer has an effect on Asbestos Exposure. Chi-squared is used to test if categorial variables are independent. In this case we are testing two categorical variables: asbestos exposure and lung cancer. Our hypothesis:</p>
+<p>The first statistical method we will perform is a Chi-Squared test. We will use Chi-Squared to determine if lung cancer has an effect on Asbestos Exposure. Chi-squared is used to test if categorical variables are independent. In this case, we are testing two categorical variables: asbestos exposure and lung cancer. Our hypothesis:</p>
 <p>H0 - Asbestos exposure does not have an effect on lung cancer</p>
 <p>HA - Asbestos exposure does have an effect on lung cancer</p>
 </div>
@@ -9083,7 +9083,7 @@ Asbestos exposure is a major environmental factor that significantly increases t
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>HO: There is no difference in average packs per day amongst the different alcohol consumption levels</p>
+<p>HO: There is no difference in average packs per day among the different alcohol consumption levels</p>
 <p>HA: There is a difference in average packs per day for at least one alcohol consumption level</p>
 </div>
 </div>
@@ -9608,7 +9608,7 @@ group1 group2 meandiff p-adj   lower  upper  reject
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Conclusion-2">Conclusion 2<a class="anchor-link" href="#Conclusion-2">¶</a></h2><p>For the second test, we wanted to see if there is a correlation between alcohol exposure and smoking levels, denoted as pack_years. Since smoking is known to have an impact on lung cancer, we wanted to test if there is a correlation between alcohol consumption and pack years, as typically both of these lifestyle habits may correlate and cause an impact on lung cancer levels. Exploring this correlation may help us determine if alcohol consumption could contribute to smoking levels and, in turn lung cancer.</p>
 <p>Our null hypothesis was that there was no difference in smoking levels (packs per day) between any of the alcohol consumption levels (none, moderate, heavy). The alternative hypothesis indicated that there was a difference in at least one consumption group as compared to the others.</p>
-<p>After running the ANOVA test, we obtained a p-value of 0.015, which is less than 0.05. As a result, we reject the null hypothesis, indicating that there is a statistically significant relationship. This concludes that alcohol consumption does correlate with the smoking levels of a person. A further analysis using post hoc with Turkey HSD showed that moderate alcohol consumption had higher alchohol consumption compared to non-drinkers, as seen by the p value of 0.0125. This was done to find out which groups differ, and by how much they differ. However, none of these differences are very large or significant. In the box plot, we see that the means of moderate and heavy are slightly higher than that of the none group, as seen by the black line. However, the moderate mean is slightly higher than the heavy group mean, indicating that the biggest difference in mean is between "none" and "moderate". This is confirmed by the post-hoc test.</p>
+<p>After running the ANOVA test, we obtained a p-value of 0.015, which is less than 0.05. As a result, we reject the null hypothesis, indicating that there is a statistically significant relationship. This concludes that alcohol consumption does correlate with the smoking levels of a person. A further analysis using post hoc with Turkey HSD showed that moderate alcohol consumption had higher alcohol consumption compared to non-drinkers, as seen by the p value of 0.0125. This was done to find out which groups differ, and by how much they differ. However, none of these differences are very large or significant. In the box plot, we see that the means of moderate and heavy are slightly higher than that of the none group, as seen by the black line. However, the moderate mean is slightly higher than the heavy group mean, indicating that the biggest difference in mean is between "none" and "moderate". This is confirmed by the post-hoc test.</p>
 <p>After completing this ANOVA test, a chi-squared test was done to investigate a correlation between secondhand smoke and lung cancer. The p-value of 5e104 indicates that we reject the null hypothesis and that secondhand smoke exposure has an impact on lung cancer. This is also illustrated by the graph, as there are more lung cancer instances amongst those who have the exposure as compared to those who don't.</p>
 </div>
 </div>
@@ -9763,7 +9763,7 @@ T-stat: 27.241939853277565
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>After completing a primary analysis of the data, we will now compare three different tecniques of ML modeling to compare the recall and precision. By comparing and contrasting these different techniques, we hope to choose one that will best fit the purposes for lung cancer analysis and allow us to analyze the features correctly.</p>
+<p>After completing a primary analysis of the data, we will now compare three different techniques of ML modeling to compare the recall and precision. By comparing and contrasting these different techniques, we hope to choose one that will best fit the purposes of lung cancer analysis and allow us to analyze the features correctly.</p>
 </div>
 </div>
 </div>
@@ -9819,7 +9819,7 @@ T-stat: 27.241939853277565
 <span class="c1"># Get the predicted output</span>
 <span class="n">y_pred</span> <span class="o">=</span> <span class="n">mlp</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_scaled</span><span class="p">)</span>
 
-<span class="c1"># Pring the accuracy and classification report to see how well the model performed</span>
+<span class="c1"># Print the accuracy and classification report to see how well the model performed</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Accuracy:"</span><span class="p">,</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Classification Report:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
 
@@ -9892,7 +9892,7 @@ Prediction Probabilities (first 5):
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Next, we implement a Random Forest classifier to analyze how different features contribute to lung cancer prediction. We construct a preprocessing pipeline that standardizes numerical variables (age and pack-years) using z-score normalization via StandardScaler, and applied one-hot encoding to categorical variables. A Random Forest classifier with 100 trees is trained within this pipeline. Finally, we evaluate the model's performance using key metrics including accuracy, precision, recall, and F1-score, with the positive class (lung cancer presence) identified as label 1.</p>
+<p>Next, we implement a Random Forest classifier to analyze how different features contribute to lung cancer prediction. We construct a preprocessing pipeline that standardizes numerical variables (age and pack-years) using z-score normalization via StandardScaler, and apply one-hot encoding to categorical variables. A Random Forest classifier with 100 trees is trained within this pipeline. Finally, we evaluate the model's performance using key metrics, including accuracy, precision, recall, and F1-score, with the positive class (lung cancer presence) identified as label 1.</p>
 </div>
 </div>
 </div>
@@ -10174,7 +10174,7 @@ accuracy:  0.7071
 <p>We first wanted to analyze how age affects lung cancer risks. The odds ratio for age was approximately 1.012, which indicates that older patients are 1.012 times more likely to have lung cancer.</p>
 <p>We next wanted to analyze which exposure of radon, asbestos, and second hand smoke was the greatest contributor to lung cancer risk. When comparing the odds ratio of these features, asbestos exposure had the highest of 2.2, indicating that patients with asbestos exposure were 2.2 times more likely to have lung cancer as opposed to patients without asbestos exposure.</p>
 <p>Another important question we wanted to answer through our analysis was which feature contributes most strongly to lung cancer risk.</p>
-<p>As seen by the regression analysis, smoking intensity carries an odds ratio of 2.8, indicating that a level increase in smoking intensity increases a patient's likelihood of lung cancer by 2.8. This comparison is also seen by the graph of odds-ratios and features, showing that smoking intensity, asbestos exposure, and a copd diagnosis carried the greatest risk in someone being diagnosed with lung cancer.</p>
+<p>As seen by the regression analysis, smoking intensity carries an odds ratio of 2.8, indicating that a level increase in smoking intensity increases a patient's likelihood of lung cancer by 2.8. This comparison is also seen by the graph of odds-ratios and features, showing that smoking intensity, asbestos exposure, and a COPD diagnosis carried the greatest risk in someone being diagnosed with lung cancer.</p>
 </div>
 </div>
 </div>
@@ -10242,7 +10242,7 @@ accuracy:  0.7071
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>This graph represents the precision and recall values given different classification thresholds. The classification threshold is the value which determines whether the model will predict lung cancer or not, given different confidence levels. These two curves meet at approximately 0.65. Our model is predicting whether someone has lung cancer or not, and we believe that false negatives, defined as someone having lung cancer but being predicted not to, are more harmful than false positives, defined as someone being predicted to have lung cancer while being healthy. Given this, we decided to use a lower classification threshold, around 0.3, which would make our model less likely to improperly miss a diagnosis.</p>
+<p>This graph represents the precision and recall values given different classification thresholds. The classification threshold is the value that determines whether the model will predict lung cancer or not, given different confidence levels. These two curves meet at approximately 0.65. Our model is predicting whether someone has lung cancer or not, and we believe that false negatives, defined as someone having lung cancer but being predicted not to, are more harmful than false positives, defined as someone being predicted to have lung cancer while being healthy. Given this, we decided to use a lower classification threshold, around 0.3, which would make our model less likely to improperly miss a diagnosis.</p>
 </div>
 </div>
 </div>
@@ -10330,7 +10330,7 @@ accuracy:  0.7071
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>This forest plot shows that age has the weakest association with a person's chance of developing lung cancer. Smoking intensity has the highest immediate impact on a person's odds of developing lung cancer. A person's odds of developing lung cancer get multiplied by 2.86x for each level of intensity they go up by. For instance, this would mean going up from moderate to heavy smoking use would multiply your odds by 2.86x for developing lung cancer, if all other variables remain unchanged.
-The horizontal bars represent the 95% confidence intervals for each odds ratio. These intervals show the range of values that are statistically plausible for the true effect. More narrow bars represent higher precision, while wider bars more uncertainty.</p>
+The horizontal bars represent the 95% confidence intervals for each odds ratio. These intervals show the range of values that are statistically plausible for the true effect. More narrow bars represent higher precision, while wider bars represent more uncertainty.</p>
 </div>
 </div>
 </div>
