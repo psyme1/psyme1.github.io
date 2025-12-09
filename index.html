@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>CMSC320_Lung_cancer_dataset (2)</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>CMSC320_Lung_cancer_dataset (3)</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7555,7 +7555,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>The main purpose of this project is to analyze and share how different features may increase the chances for lung cancer. This would make it easier for patients to self diagnose or consult a doctor if they notice they have any of the traits or risk factors in our dataset.</p>
+<p>The main purpose of this project is to analyze and share how different features may increase the chances for lung cancer. This could make it easier for patients to recognize potential risk factors and consult a doctor earlier.</p>
 <p>This could also clear any misconceptions people have about causes of cancer; however, we wanted to prioritize identifying patterns that might help researchers or clinicians understand risk factors, before clearing any misconceptions.</p>
 <p>Why is it important? According to a study done by UChicago Medicine, the mortality rate for people who are diagnosed with cancer late is significantly higher than the rate for people diagnosed early (Stage 1). By determining what the risk factors are for lung cancer, we can have patients be diagnosed earlier, since both the patients and the doctor will know if a patient is at high risk.
 We will use the features that we have in our dataset to provide an analysis on which features have the most likely effect on lung cancer while also providing information of any correlation between the different features for patients to make an informed decision on their self-diagnosis.</p>
@@ -8609,7 +8609,7 @@ memory usage: 4.2+ MB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>This is the part where we now perform exploratory data analysis. Our goal is to oberserve trends using various statistical methods. As we go along we will explain which statistical methods we will be using along with the hypothesis testing.</p>
+<p>This is the part where we now perform exploratory data analysis. Our goal is to observe trends using various statistical methods. As we go along we will explain which statistical methods we will be using along with the hypothesis testing.</p>
 <p>A p-value quantifies how compatible our data is with the null hypothesis. A small p-value (less than 0.05) suggests the data is unlikely to occur under the null hypothesis, leading us to reject the null in favor of the alternative.</p>
 </div>
 </div>
@@ -8643,7 +8643,7 @@ memory usage: 4.2+ MB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>The first statistical method we will perform is a Chi-Squared test. We will use Chi-Squared to determine if lung cancer has an effect on Asbestos Exposure. Chi-squared is used to test if categorial varaibles are independent. In this case we are testing two categorical varaibles: asbestos exposure and lung cancer. Our hypothesis:</p>
+<p>The first statistical method we will perform is a Chi-Squared test. We will use Chi-Squared to determine if lung cancer has an effect on Asbestos Exposure. Chi-squared is used to test if categorial variables are independent. In this case we are testing two categorical variables: asbestos exposure and lung cancer. Our hypothesis:</p>
 <p>H0 - Asbestos exposure does not have an effect on lung cancer</p>
 <p>HA - Asbestos exposure does have an effect on lung cancer</p>
 </div>
@@ -9072,7 +9072,7 @@ Asbestos exposure is a major environmental factor that significantly increases t
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>The second statistical method we plan on using is ANOVA. We will use ANOVA to test if there is a difference in smoking levels amongst the different alcohol consumption levels. ANOVA is used becuase we want to compare the means between 3 or more groups. In this case, it would be the three different levels of alcohol consumption. Our hypotheses are as follows:</p>
+<p>The second statistical method we plan on using is ANOVA. We will use ANOVA to test if there is a difference in smoking levels amongst the different alcohol consumption levels. ANOVA is used because we want to compare the means between 3 or more groups. In this case, it would be the three different levels of alcohol consumption. Our hypotheses are as follows:</p>
 </div>
 </div>
 </div>
@@ -9197,7 +9197,7 @@ group1 group2 meandiff p-adj   lower  upper  reject
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="c1">#graph the results of the pack years by the alcohol consmuption to be able to visualize it</span>
+<span class="c1">#graph the results of the pack years by the alcohol consumption to be able to visualize it</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">'alcohol_consumption'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'pack_years'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Average Pack Years by Alcohol Consumption Group'</span><span class="p">)</span>
@@ -9230,7 +9230,7 @@ group1 group2 meandiff p-adj   lower  upper  reject
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="c1"># a simple contigency table to test lung_cancer vs secondhand smoke</span>
+<div class="highlight hl-python"><pre><span></span><span class="c1"># a simple contingency table to test lung_cancer vs secondhand smoke</span>
 <span class="n">contingency_table2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'secondhand_smoke_exposure'</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">'lung_cancer'</span><span class="p">])</span>
 <span class="n">contingency_table2</span>
 </pre></div>
@@ -9763,7 +9763,7 @@ T-stat: 27.241939853277565
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>After completing a primary analysis of the data, we will now compare three different tecniques of ML modeling to compare the recall and precision. By comparing and contrasting these different technqies, we hope to choose one that will best fit the purposes for lung cancer analysis and allow us to analyze the features correctly.</p>
+<p>After completing a primary analysis of the data, we will now compare three different tecniques of ML modeling to compare the recall and precision. By comparing and contrasting these different techniques, we hope to choose one that will best fit the purposes for lung cancer analysis and allow us to analyze the features correctly.</p>
 </div>
 </div>
 </div>
@@ -9881,7 +9881,7 @@ Prediction Probabilities (first 5):
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Random-Forest-Classifer">Random Forest Classifer<a class="anchor-link" href="#Random-Forest-Classifer">¶</a></h2>
+<h2 id="Random-Forest-Classifier">Random Forest Classifier<a class="anchor-link" href="#Random-Forest-Classifier">¶</a></h2>
 </div>
 </div>
 </div>
@@ -10088,7 +10088,7 @@ accuracy:  0.7071
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="What-machine-learning-technique-should-we-use?">What machine learning technique should we use?<a class="anchor-link" href="#What-machine-learning-technique-should-we-use?">¶</a></h2><p>The machine learning technique we plan on using to do our analysis is regression. When doing testing, we first compared the recall values of both regression and classification. Our reports showed that regression had a higher recall value of 0.98. Models having a higher recall rate indicates better performance with false negatives, which is very important in cancer diagnosis. False negatives indicate that a patient has been marked with not having the diseases, when in actuality they do. When comparing all three possible techniques, regression proved to have a higher recall as compared to Random Forest Classification and MLP Classifier.</p>
+<h2 id="What-machine-learning-technique-should-we-use?">What machine learning technique should we use?<a class="anchor-link" href="#What-machine-learning-technique-should-we-use?">¶</a></h2><p>The machine learning technique we plan on using to do our analysis is regression. When doing testing, we first compared the recall values of both regression and classification. Our reports showed that regression had a higher recall value of 0.98. Models having a higher recall rate indicates better performance with false negatives, which is very important in cancer diagnosis. False negatives indicate that a patient has been marked with not having the disease, when in actuality they do. When comparing all three possible techniques, regression proved to have a higher recall as compared to Random Forest Classification and MLP Classifier.</p>
 </div>
 </div>
 </div>
@@ -10287,7 +10287,7 @@ accuracy:  0.7071
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="c1">#getting the cofidence estimates</span>
+<div class="highlight hl-python"><pre><span></span><span class="c1">#getting the confidence estimates</span>
 <span class="n">params</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">params</span>
 <span class="n">conf</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">conf_int</span><span class="p">()</span>
 <span class="n">conf</span><span class="p">[</span><span class="s1">'OR'</span><span class="p">]</span> <span class="o">=</span> <span class="n">params</span>
@@ -10329,7 +10329,7 @@ accuracy:  0.7071
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>This forest plot shows that age has the weakest association with a person's chance of developing lung cancer. Smoking intensity has the highest immiedate impact on a person's odds of developing lung cancer. A person's odds of developing lung cancer get multipled by 2.86x for each level of intensity they go up by. For instance, this would mean going up from moderate to heavy smoking use would multiply your odds by 2.86x for developing lung cancer, if all other variables remain unchanged.
+<p>This forest plot shows that age has the weakest association with a person's chance of developing lung cancer. Smoking intensity has the highest immediate impact on a person's odds of developing lung cancer. A person's odds of developing lung cancer get multiplied by 2.86x for each level of intensity they go up by. For instance, this would mean going up from moderate to heavy smoking use would multiply your odds by 2.86x for developing lung cancer, if all other variables remain unchanged.
 The horizontal bars represent the 95% confidence intervals for each odds ratio. These intervals show the range of values that are statistically plausible for the true effect. More narrow bars represent higher precision, while wider bars more uncertainty.</p>
 </div>
 </div>
@@ -10353,10 +10353,12 @@ The horizontal bars represent the 95% confidence intervals for each odds ratio. 
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Those who utilize this tutorial would find this very useful since this will help them make informed decisions on the actions they may need to take on their self-diagnosis. Knowing that early stage cancer detection is often low and can lead to a high mortality rate if not acted upon sooner means that patients need to be alert and must have a good understanding of their signs and symptoms. After knowing these signs and symptoms and then looking at or analyzing them, they can then make a better call on when they should see a doctor and get a better understanding and see if they can get an early diagnosis. The earlier the better.</p>
-<p>Based on observations throughout our analysis and modeling, we can safely say that:
-People with asbestos exposure are 2.2 times more likely to have lung cancer
-People with a high smoking intensity are 2.8 times more likely to have lung cancer when compared to medium smoking intensity.
-These two observations clearly show a correlation between asbestos exposure and lung cancer and smoking and lung cancer. This suggests that patients who have asbestos exposure, lung cancer, or both should see a doctor more often about lung cancer than patients who don’t.</p>
+<p>Based on observations throughout our analysis and modeling, we can safely say that:</p>
+<ul>
+<li>People with asbestos exposure are 2.2 times more likely to have lung cancer than those without the exposure</li>
+<li>People with a high smoking intensity are 2.8 times more likely to have lung cancer when compared to medium smoking intensity.</li>
+</ul>
+<p>These two observations clearly show a correlation between asbestos exposure and lung cancer and smoking and lung cancer. This suggests that patients who have asbestos exposure, lung cancer, or both should see a doctor more often about lung cancer than patients who don’t.</p>
 </div>
 </div>
 </div>
